@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="style.css"/>
+    <title>View All Products</title>
+</head>
+<body>
+    <h1>FPT Book store</h1>
+    <div class = "bar">
+        <a href="adminHome">Menu</a>
+        <a href="/admin/addProduct">Add book</a>
+        <a href="/">Logout</a> 
+    </div>
+    <h2>View all products</h1>
+    <ul>
+        <center>
+        <table border="1" cellspacing="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Picture</th>
+                <th>Author</th>
+                <th>Description</th>
+                <th>Options</th>
+            </tr>
+            {{#each products}}
+            <tr>
+                <td>
+                    {{name}}  
+                </td>
+                <td>
+                    {{category}}
+                </td>
+                <td>
+                    {{price}}
+                </td>
+                <td>
+                    {{quantity}}
+                </td>
+                <td>
+                    <a href="/editProduct?id={{_id}}"> <img src="{{picURL}}" width="150" height="100"/> </a>
+                </td>
+                <td>
+                    {{author}}
+                </td>
+                <td>
+                    {{description}}
+                </td>
+                <td>
+                    <a onclick="return confirm('Are you sure you want to delete this product?')" href="/deleteProduct?id={{_id}}">Delete</a>
+                    <br>
+                    <a href ="/editProduct?id={{_id}}">Edit</a>
+                </td>
+            </tr>
+            {{/each}}
+        </thead>
+        </table>
+        </center>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="style.css"/>
+    <title>Edit Product</title>
+</head>
+<body>
+    <h3>Edit book</h3>
+    <div class = "bar">
+        <a href="staffHome">Menu</a>
+        <a href="addProduct">Add book</a>
+        <a href="product">View all books</a>
+        <a href="/">Logout</a> 
+    </div>
+    <h2 style="color: orange;">Edit Product</h2>
+    <form action="/staff/editProduct" method="post">
+        <input type="hidden" name="txtId" value="{{product._id}}">
+        Name: <input type="text" name="txtName" id="txtName" value="{{product.name}}">
+        <br>
+        Category: <input type="text" name="txtCategory" id="txtCategory" value="{{product.category}}">
+        <br>
+        Price:   <input type="text" name="txtPrice" id="txtPrice" value="{{product.price}}">
+        <Br>
+        Quantity: <input type="text" name="txtQuantity" id="Quantity" value="{{product.quantity}}">
+        <Br>
+        Picture URL:
+        <input type="text" name="txtPicURL" id="txtPicURL" size="150" value="{{product.picURL}}">
+        <Br>
+        <img src="{{product.picURL}}" width="150" height="100"/>
+        <br>
+        Author : <input type="text" name="txtAuthor" id="txtAuthor" value="{{product.author}}">
+        <br>
+        Description : <input type="text" name="txtDescription" id="txtDescription" value="{{product.description}}">
+        <br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

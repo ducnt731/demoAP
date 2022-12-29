@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>View orders</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="bar">
+                <a class="navbar-brand" href="#">FPT Book store</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/staff/staffHome">Menu</a></li>
+                <li><a href="/staff/staffProduct">Add book</a></li>
+                <li><a href="/admin/product">View all books</a></li>
+                <li><a href="/admin/viewprofile">View profile</a></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1>View Orders</h1>
+    {{!-- {{#each users}}
+    <lu>
+        <li>{{fullName}}|{{Address}}|{{Phone}}</li>
+    </lu> --}}
+    <ul>
+        <center>
+            <table class="table table-dark table-striped">
+                <thread>
+                    <tr>
+                    <td>
+                        Order Owner
+                    </td>
+                    <td>
+                        Order Detail
+                    </td>
+                    <td>
+                        Time Ordered
+                    </td>
+                    <td>
+                        Status
+                    </td>
+                    <td>
+                        Options
+                    </td>
+                    <td>
+                        Options
+                    </td>
+                    <td>
+                        Options
+                    </td>
+                    <td>
+                        Options
+                    </td>
+                    <td>
+                        Options
+                    </td>
+                    </tr>
+                    {{#each orders}}
+                    <tr>
+                        <th>
+                            {{customer}}
+                        </th>
+                        <th>
+                            <a href="/staff/orderDetail">{{_id}}</a>
+                        </th>
+                        <th>
+                            {{time}}
+                        </th>
+                        <th>
+                            {{status}}
+                        </th>
+                        <th>
+                            {{date}}
+                        </th>
+                        <th>
+                            {{orders.name}}
+                        </th>
+                        <th>
+                            {{order.price}}
+                        </th>
+                        <th>
+                            {{quanti}}
+                        </th>
+                        <th>
+                            {{ttal}}
+                        </th>
+                        <th>
+                            <td><a href="/staff/editOrder?id={{_id}}">edit</a></td>
+                            <td><a onclick="return confirm('Do you want to delete')" href="/staff/deleteOrder?id={{_id}}">delete</a>
+                        </td>
+                        </th>
+                    </tr>
+                    {{/each}}
+                </thread>
+            </table>
+        </center>
+    </ul>
+</body>
+
+</html>

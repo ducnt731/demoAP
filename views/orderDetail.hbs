@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>View orders</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="bar">
+                <a class="navbar-brand" href="#">FPT Book store</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/adminHome">Menu</a></li>
+                <li><a href="/admin/addProduct">Add book</a></li>
+                <li><a href="/admin/product">View all books</a></li>
+                <li><a href="/admin/viewprofile">View profile</a></li>
+                <li><a href="/admin/viewOrder">View order</a>
+                <li><a href="/">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1>View Orders</h1>
+    {{!-- {{#each users}}
+    <lu>
+        <li>{{fullName}}|{{Address}}|{{Phone}}</li>
+    </lu> --}}
+    <ul>
+        <center>
+            <table class="table table-dark table-striped">
+                <thread>
+                    <tr>
+                    <td>
+                        Ordered books
+                    </td>
+                    <td>
+                        Ordered price
+                    </td>
+                    <td>
+                        Time Ordered
+                    </td>
+                    <td>
+                        Status
+                    </td>
+                    </tr>
+                    {{#each details}}
+                    <tr>
+                        <th>
+                            {{customer}}
+                        </th>
+                        <th>
+                            
+                        </th>
+                        <th>
+                            {{time}}
+                        </th>
+                        <th>
+                            {{status}}
+                        </th>
+                        <th>
+                            {{date}}
+                        </th>
+                        
+                    </tr>
+                    {{/each}}
+                </thread>
+            </table>
+        </center>
+    </ul>
+</body>
+
+</html>
